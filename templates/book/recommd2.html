@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}推荐{% endblock %}
+{% block position %}推荐{% endblock %}
+{% block position2 %}推荐{% endblock %}
+
+{% block body_content %}
+    <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
+        <div class="container">
+            <div class="row" style="justify-content: center">
+            {% if data %}
+                <!-- 图书循环 -->
+                {% for book in data %}
+                <div class="" style="width: 30%;padding: 0 45px">
+                    <div class="product" >
+                        <div class="product__thumb">
+                            <img src="{{ book.book_img }}" alt="product image">
+                            <div class="new__box">
+                                <span class="new-label">推荐</span>
+                            </div>
+                        </div>
+                        <div class="product__content">
+                            <h4><a href="{% url 'myauth:details' book.id %}">{{ book.book_name }}</a></h4>
+                            <p style="margin-top: -10px">{{ book.book_point }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- End 图书 -->
+            {% else %}
+                <div class="alert alert-danger" role="alert">抱歉，你还没有对任何书籍作出评分，因此无法为你推荐属于你的书籍</div>
+                <div class="alert alert-danger" role="alert">建议你去可以去看看热门书籍并作出评分，以便下次为你准确推荐</div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

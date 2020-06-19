@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}注册{% endblock %}
+{% block position %}注册{% endblock %}
+{% block position2 %}注册{% endblock %}
+
+{% block body_content %}
+    <section class="wn_contact_area bg--white pt--80">
+        	<div class="container">
+        		<div class="row">
+                    <div class="col-lg-8 col-12">
+        				<div class="contact-form-wrap">
+        					<h2 class="contact__title">注册</h2>
+                            {% if registerform.errors %}
+                                <div class="error">{{ registerform.errors }}</div>
+                            {% endif %}
+                            <form  action="" method="post">
+                                {% csrf_token %}
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="username" placeholder="用户名" maxlength="150" autofocus required id="id_username">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    <input type="password" name="password1" placeholder="密码" required id="id_password1">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    <input type="password" name="password2" placeholder="确认密码" required id="id_password2">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    <input type="email" name="email" placeholder="邮箱" maxlength="254" id="id_email">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="nikname" placeholder="昵称" maxlength="50" required id="id_nikname">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                   <input type="date" name="birthday" placeholder="生日" required id="id_birthday">
+                                </div>
+                                <div class="contact-btn">
+                                    <button type="submit">提交</button>
+                                </div>
+                            </form>
+                        </div>
+        			</div>
+                </div>
+            </div>
+    </section>
+{% endblock %}
