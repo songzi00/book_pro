@@ -145,7 +145,7 @@ Naked==0.1.31
 nbconvert==5.5.0
 nbformat==4.4.0
 nltk==3.5
-notebook==5.7.8
+notebook==6.1.5
 novel==0.0.2
 numpy==1.18.1
 oauthlib==3.0.1
