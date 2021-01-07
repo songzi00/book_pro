@@ -129,7 +129,7 @@ jupyter-echarts-pypkg==0.1.1
 kiwisolver==1.1.0
 kombu==3.0.37
 lml==0.0.9
-lxml==4.5.0
+lxml==4.6.2
 macropy3==1.1.0b2
 Markdown==3.1.1
 MarkupPy==1.14
