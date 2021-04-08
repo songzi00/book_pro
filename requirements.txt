@@ -51,7 +51,7 @@ decorator==4.4.0
 defusedxml==0.5.0
 demjson==2.2.4
 diff-match-patch==20181111
-Django==3.0.5
+Django==3.0.14
 django-apscheduler==0.3.0
 django-captcha==1.0.0
 django-celery==3.3.1
