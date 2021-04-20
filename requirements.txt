@@ -175,7 +175,7 @@ Protego==0.1.16
 proxy==0.0.1
 ptyprocess==0.6.0
 public==2019.4.13
-py==1.8.1
+py==1.10.0
 py3Fdfs==2.2.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
